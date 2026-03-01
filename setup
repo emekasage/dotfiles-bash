@@ -2,7 +2,7 @@
 
 # Description: Link dotfiles to home directory
 
-mkdir -p ~/.config
+#mkdir -p ~/.config
 
 ln -sf ~/dotfiles/bashrc ~/.bashrc
 ln -sf ~/dotfiles/vimrc ~/.vimrc
