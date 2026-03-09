@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Description: Display Dotfiles Information
+
+dotfiles_dir="$HOME/dotfiles"
+file_count="$(ls "dotfiles_dir" | wc -l)"
+today=$(date +%Y-%m-%d)
+
+echo "User's name: $USER"
+echo "The Home Path: $HOME"
+echo "Dotfiles location: $dotfiles_dir"
+echo "Number of Files in Current Directory: $file_count"
+echo "Today's date: $today"

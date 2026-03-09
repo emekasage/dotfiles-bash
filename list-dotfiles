@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# List Dotfiles
+
+count=1
+for file in .* *; do
+	[[ "$file" == .* ]] && echo "Hidden file: $file" && continue
+	[[ -f "$file" ]] || continue
+	echo "$count. $file"
+	((count++))
+done
