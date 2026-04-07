@@ -4,10 +4,14 @@
 
 #mkdir -p ~/.config
 
-dotfiles=("bashrc" "vimrc")
+dotfiles=("bashrc" "vimrc" "starship.toml")
 
 for file in "${dotfiles[@]}"; do
-	ln -sf ~/dotfiles/"$file" ~/."$file"
+	if [ "$file" == starship.toml ]; then
+		ln -sf ~/dotfiles/"$file" ~/.config/"$file"
+	else
+		ln -sf ~/dotfiles/"$file" ~/."$file"
+	fi
 done
 
 #ln -sf ~/dotfiles/bashrc ~/.bashrc
