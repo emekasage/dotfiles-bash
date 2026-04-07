@@ -116,3 +116,4 @@ if ! shopt -oq posix; then
   fi
 fi
 export PATH="$HOME/.local/bin:$PATH"
+eval "$(starship init bash)"
